@@ -3,23 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cole's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Cole Segura's Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
+        <h1>Cole Segura</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Gallery</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
     </header>
-    <section class="photography">
-        <h2>Photography</h2>
-        <p>Gallery of my work will go here.</p>
-    </section>
-    <section class="writing">
-        <h2>Writing</h2>
-        <p>Links to my publications will go here.</p>
-    </section>
+    <main>
+        <div class="gallery">
+            <!-- Sample Photo from Project 1 -->
+            <div class="photo" data-project="growth.html">
+                <img src="projects/images/growth/IMG_4198.JPG" alt="Project 1 - Photo 1">
+                <div class="info">Structure - February 2024</div>
+            </div>
+            <div class="photo" data-project="structure.html">
+                <img src="projects/images/structure/IMG_4244.jpg" alt="Project 1 - Photo 1">
+                <div class="info">Structure - February 2024</div>
+            </div>
+            <!-- Repeat for each photo, make sure each project and photo path is correct -->
+        </div>
+    </main>
     <footer>
-        <p>Contact me at <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p><a href="mailto:cwsegura@protonmail.com">Email</a></p>
     </footer>
 </body>
 </html>
