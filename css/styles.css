@@ -1,53 +1,56 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    height: 100%;
+    background: #fff;
+    font-family: Arial, sans-serif;
 }
-header, footer {
-    background-color: #022;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-nav li {
-    display: inline;
-    margin-right: 10px;
-}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    gap: 10px; /* Adjust gap between images */
 }
+
 .photo {
     position: relative;
-    margin: 10px;
+    cursor: pointer;
 }
+
 .photo img {
-    width: 200px;
+    width: 150px; /* Adjust based on preference */
     height: auto;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s, filter 0.5s ease;
+    display: block;
 }
+
 .photo:hover img {
     transform: scale(1.1);
+    filter: brightness(80%);
 }
+
 .info {
     position: absolute;
+    width: 100%;
     bottom: 0;
     left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0,0,0,0.7);
     color: white;
     text-align: center;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
+    transition: opacity 0.5s ease;
+    padding: 10px 0;
 }
+
 .photo:hover .info {
     visibility: visible;
     opacity: 1;
