@@ -1,8 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const photos = document.querySelectorAll('.photo');
-    photos.forEach(photo => {
-        photo.addEventListener('click', function() {
-            window.location.href = this.getAttribute('data-project');
+    const projectLinks = document.querySelectorAll('.project');
+
+    projectLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            this.querySelector('.overlay').style.opacity = 1;
+        });
+        link.addEventListener('mouseleave', function() {
+            this.querySelector('.overlay').style.opacity = 0;
+        });
+        link.addEventListener('click', function() {
+            window.location.href = this.querySelector('.view-link').href;
         });
     });
 });
